@@ -24,11 +24,11 @@ app.get("/health", (req, res) =>{
 })
 
 // route import
-
+import authRoutes from "./routes/auth.routes.js";
 import { errorHandler } from "./utils/errorHandler.js";
 
 // route declaration
-
+app.use("/api/v1/auth", authRoutes);
 
 app.use(errorHandler);
 

@@ -19,7 +19,7 @@ requiredVars.forEach((varName) => {
 })
 
 export const config = {
-    port: process.env.PORT,
+    port: process.env.PORT || 8080,
     env: process.env.NODE_ENV || 'development',
     pg: {
         host: process.env.PGHOST,
